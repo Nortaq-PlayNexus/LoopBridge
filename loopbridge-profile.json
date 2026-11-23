@@ -1,0 +1,53 @@
+{
+  "name": "default",
+  "loop": { "mode": "infinite", "count": 0, "start_phase": "chatgpt_to_opencode" },
+  "timing": { "global_multiplier": 1.0, "phase_delays_ms": {}, "between_loops_ms": 500 },
+  "windows": {
+    "brave": { "title_regex": ".*ChatGPT.*", "processes": ["brave.exe"], "match": "first" },
+    "powershell": { "title_regex": ".*(OpenCode|opencode|PowerShell).*", "processes": ["WindowsTerminal.exe", "powershell.exe", "pwsh.exe"], "match": "first" },
+    "auto_restore": true,
+    "set_topmost": false,
+    "find_interval_ms": 500
+  },
+  "chatgpt": {
+    "copy_method": "autocopy_button",
+    "done_detection": "uia_poll",
+    "send_key": "enter",
+    "custom_send_keys": "",
+    "paste_method": "clipboard",
+    "poll_interval_ms": 800,
+    "timeout_s": 300.0
+  },
+  "opencode": {
+    "completion_mode": "screen_marker",
+    "marker_regex": "^>\\s*$",
+    "submit": "paste_select_enter",
+    "capture": "select_all_copy",
+    "timeout_s": 600.0,
+    "command": "opencode run --format json",
+    "working_dir": "",
+    "visible_console": true,
+    "done_event_types": ["done", "end", "exit", "error"]
+  },
+  "text": {
+    "sanitize_ansi": true,
+    "strip_markdown": false,
+    "prefix": "",
+    "suffix": "",
+    "max_len": 0
+  },
+  "watchdog": {
+    "default_timeout_s": 300.0,
+    "phase_timeouts_s": {},
+    "retries": 3,
+    "backoff_ms": 1000,
+    "continue_on_error": false,
+    "max_run_time_s": 0.0
+  },
+  "debug": {
+    "enabled": false,
+    "dry_run": false,
+    "screenshots": false,
+    "capture_tree": false
+  }
+}

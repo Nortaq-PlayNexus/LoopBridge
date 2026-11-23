@@ -1,0 +1,13 @@
+# Core (required on Windows 11 for real window driving)
+uiautomation>=2.0.24
+pyperclip>=1.8.2
+pyautogui>=0.9.54
+
+# CDP ChatGPT driver (optional, copy_method = "cdp")
+websocket-client>=1.7.0
+
+# Desktop UI (optional)
+PySide6>=6.6.0
+
+# Packaging (build a standalone exe)
+pyinstaller>=6.3.0

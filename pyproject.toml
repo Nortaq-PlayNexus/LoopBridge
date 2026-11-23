@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loopbridge"
+version = "1.0.0"
+description = "Windows 11 relay loop between ChatGPT in Brave and OpenCode in a PowerShell window."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "DJ PhantomTape", url = "https://github.com/Nortaq-PlayNexus" }]
+keywords = ["automation", "chatgpt", "opencode", "windows", "uiautomation", "relay", "pyside6"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows :: Windows 11",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Desktop Environment",
+  "Topic :: Software Development :: User Interfaces",
+]
+dependencies = [
+  "uiautomation>=2.0.24; sys_platform == 'win32'",
+  "pyperclip>=1.8.2",
+  "pyautogui>=0.9.54",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6>=6.6.0"]
+cdp = ["websocket-client>=1.7.0"]
+dev = ["pyinstaller>=6.3.0"]
+
+[project.scripts]
+loopbridge = "loopbridge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["loopbridge*"]

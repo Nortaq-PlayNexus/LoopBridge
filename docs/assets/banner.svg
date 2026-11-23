@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">LoopBridge banner</title>
+  <desc id="desc">Dark banner reading LoopBridge: ChatGPT to OpenCode relay for Windows 11.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a12"/>
+      <stop offset="0.55" stop-color="#0a0e1a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B8FF1E" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#B8FF1E"/>
+      <stop offset="0.8" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1f2937" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+
+  <rect x="0" y="0" width="1280" height="4" fill="url(#wire)"/>
+
+  <g font-family="Consolas, 'Cascadia Code', monospace">
+    <text x="64" y="74" fill="#6b7280" font-size="15" letter-spacing="4">PHNT-011 // RELAY TOOL</text>
+    <text x="64" y="168" fill="#B8FF1E" font-size="76" font-weight="700" letter-spacing="6">LOOPBRIDGE</text>
+    <text x="66" y="212" fill="#E5E7EB" font-size="24">CHATGPT &#8596; OPENCODE &#8212; AUTOMATED RELAY LOOP</text>
+    <text x="66" y="248" fill="#00E5FF" font-size="17">WINDOWS 11 &#183; UIA + CDP + CLI DRIVERS &#183; WATCHDOG &#183; DRY-RUN</text>
+  </g>
+
+  <g transform="translate(64 288)" font-family="Consolas, 'Cascadia Code', monospace" font-size="14">
+    <rect x="0" y="0" width="560" height="44" rx="6" fill="#0d1220" stroke="#263041"/>
+    <text x="14" y="18" fill="#9aa3b8">$ python run.py --simulate --count 2</text>
+    <text x="14" y="36" fill="#86efac">&#10003; loop complete &#183; 2 iterations &#183; 0 errors</text>
+  </g>
+
+  <g transform="translate(760 92)">
+    <rect x="0" y="0" width="456" height="196" rx="12" fill="#0d1220" stroke="#263041"/>
+    <g font-family="Consolas, 'Cascadia Code', monospace" font-size="15">
+      <text x="22" y="38" fill="#6b7280">&#9679; RELAY PATH</text>
+      <text x="22" y="74" fill="#7dd3fc">01  WAIT CHATGPT</text>
+      <text x="22" y="102" fill="#7dd3fc">02  COPY CHATGPT</text>
+      <text x="22" y="130" fill="#B8FF1E">03  PASTE OPENCODE</text>
+      <text x="22" y="158" fill="#86efac">04  COPY OPENCODE</text>
+      <text x="22" y="186" fill="#00E5FF">05  SEND CHATGPT  &#8635;</text>
+    </g>
+  </g>
+
+  <g fill="#B8FF1E">
+    <circle cx="1228" cy="46" r="6"/>
+  </g>
+  <text x="1210" y="76" text-anchor="end" fill="#6b7280" font-family="Consolas, monospace" font-size="13">ON AIR</text>
+</svg>
